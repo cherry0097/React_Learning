@@ -18,6 +18,7 @@ function BasicTable() {
       <table {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroups) => {
+            return (
             <tr {...headerGroups.getHeaderGroupProps()}>
               {headerGroups.headers.map((column) => {
                 return (
@@ -26,7 +27,7 @@ function BasicTable() {
                   </th>
                 );
               })}
-            </tr>;
+            </tr>);
           })}
         </thead>
         <tbody {...getTableBodyProps()}>
